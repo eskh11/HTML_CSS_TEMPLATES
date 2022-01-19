@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+/* component */
+.container {
+  background-color: #eee;
+  border: 1px solid #444;
+  width: 95%;
+  padding: 20px 40px;
+  margin: 50px 30px;
+}
+.container .box > div {
+  padding: 30px 20px;
+}
+.container .box p {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.container .box span {
+  position: relative;
+  height: 2px;
+  width: 217px;
+  display: block;
+  bottom: -15px;
+}
+.container .box .blue {
+  color: blue;
+}
+.container .box .red {
+  color: red;
+}
+.container .box .green {
+  color: green;
+}
+.container .box .orange {
+  color: orange;
+}
+.container .box .blue span {
+  background-image: linear-gradient(90deg, blue 50%, #ddd 50%);
+}
+.container .box .blue span::before {
+  background-color: blue;
+}
+.container .box .red span {
+  background-image: linear-gradient(90deg, red 50%, #ddd 50%);
+}
+.container .box .red span::before {
+  background-color: red;
+}
+.container .box .green span {
+  background-image: linear-gradient(90deg, green 50%, #ddd 50%);
+}
+.container .box .green span::before {
+  background-color: green;
+}
+.container .box .orange span {
+  background-image: linear-gradient(90deg, orange 50%, #ddd 50%);
+}
+.container .box .orange span::before {
+  background-color: orange;
+}
+/* component */
+/* circle */
+.container .box.circle span::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+/* circle */
+/* square */
+.container .box.square span::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+}
+/* square */
+/* up */
+.container .box.up span::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -18px;
+  background-color: transparent;
+  border: 10px solid;
+}
+.container .box.up .blue span::before {
+  border-color: transparent transparent blue transparent;
+}
+.container .box.up .red span::before {
+  border-color: transparent transparent red transparent;
+}
+.container .box.up .green span::before {
+  border-color: transparent transparent green transparent;
+}
+.container .box.up .orange span::before {
+  border-color: transparent transparent orange transparent;
+}
+/* up */
+/* down */
+.container .box.down span::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  background-color: transparent;
+  border: 10px solid;
+}
+.container .box.down .blue span::before {
+  border-color: blue transparent transparent transparent;
+}
+.container .box.down .red span::before {
+  border-color: red transparent transparent transparent;
+}
+.container .box.down .green span::before {
+  border-color: green transparent transparent transparent;
+}
+.container .box.down .orange span::before {
+  border-color: orange transparent transparent transparent;
+}
+/* down */

@@ -1,0 +1,279 @@
+/* strat gobal rules */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  height: 72px;
+}
+@media (max-width: 767px) {
+  header .container {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+header .container .logo {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  header .container .logo {
+    flex-basis: 100%;
+  }
+}
+header .container .links {
+  display: flex;
+}
+@media (max-width: 767px) {
+  header .container .links {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+header .container .links li {
+  padding: 0 10px;
+}
+header .container .links li a {
+  color: black;
+  font-size: 14px;
+}
+.landing {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+  text-align: center;
+}
+.landing .container h2 {
+  margin-bottom: 15px;
+}
+.landing .container h2 span {
+  color: #03a9f4;
+}
+.landing .container p {
+  line-height: 1.8;
+  color: #777;
+}
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.services .container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .services .container {
+    flex-direction: column;
+  }
+}
+.services .container .box {
+  text-align: center;
+}
+.services .container .box img {
+  width: 80px;
+  height: 80px;
+}
+.services .container .box h3 {
+  margin: 10px 0;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.services .container .box p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #777;
+}
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .about .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about .container img {
+    margin: 15px auto;
+  }
+}
+.about .container img {
+  max-width: 300px;
+}
+.about .container .info h3 {
+  margin: 0 0 15px;
+}
+.about .container .info p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.5;
+}
+.stats {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.stats .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .stats .container {
+    flex-direction: column;
+  }
+}
+.stats .container .box {
+  padding: 5px 80px;
+  text-align: center;
+  color: white;
+  border-radius: 6px;
+}
+.stats .container .box.red {
+  background-color: #f44336;
+}
+.stats .container .box.blue {
+  background-color: #3f51b5;
+}
+.stats .container .box.green {
+  background-color: #009688;
+}
+.stats .container .box h3 {
+  margin: 5px 0;
+  font-size: 25px;
+}
+.stats .container .box p {
+  font-size: 14px;
+}
+.our-skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+.our-skills h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.our-skills .prog-holder {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  .our-skills .prog-holder {
+    flex-direction: column;
+  }
+}
+.our-skills .prog-holder h3 {
+  flex-basis: 10%;
+  text-align: right;
+}
+@media (max-width: 767px) {
+  .our-skills .prog-holder h3 {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+.our-skills .prog-holder .prog {
+  background-color: white;
+  height: 30px;
+  flex-basis: 88%;
+}
+@media (max-width: 767px) {
+  .our-skills .prog-holder .prog {
+    flex-basis: initial;
+  }
+}
+.our-skills .prog-holder .prog span {
+  width: 60%;
+  background: #2196f3;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.our-skills .prog-holder .prog span::after {
+  content: attr(data-progress);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  color: white;
+  font-weight: bold;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  footer {
+    padding: 20px 30px;
+  }
+}
+footer p {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  footer p {
+    font-size: 10px;
+  }
+}
+footer p span {
+  color: #2196f3;
+}

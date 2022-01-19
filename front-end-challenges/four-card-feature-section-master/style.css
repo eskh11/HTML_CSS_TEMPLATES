@@ -1,0 +1,165 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.heading {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.heading p:first-of-type {
+  font-size: 40px;
+  margin: 20px 0 10px;
+  font-weight: normal;
+  color: #939395;
+}
+@media (max-width: 767px) {
+  .heading p:first-of-type {
+    font-size: 30px;
+  }
+}
+.heading h1 {
+  font-size: 40px;
+  margin: 0 0 15px;
+  color: #706e83;
+}
+@media (max-width: 767px) {
+  .heading h1 {
+    font-size: 30px;
+  }
+}
+.heading p:last-of-type {
+  font-size: 18px;
+  color: #777;
+}
+@media (max-width: 767px) {
+  .heading p:last-of-type {
+    font-size: 14px;
+    line-height: 2;
+    margin: 20px 0 -30px;
+  }
+}
+.cards {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.cards .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .cards .container {
+    flex-direction: column;
+  }
+}
+.cards .card {
+  padding: 20px;
+  position: relative;
+  flex-basis: 30%;
+  box-shadow: 0px 2px 4px 5px #f5f5f5;
+  border-radius: 6px;
+  height: 330px;
+}
+@media (max-width: 991px) {
+  .cards .card {
+    flex-basis: 45%;
+  }
+}
+.cards .card h2 {
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+.cards .card p {
+  color: rgb(119, 119, 119);
+  font-size: 18px;
+  margin: 0px 0px 5px;
+  text-transform: capitalize;
+  line-height: 2;
+}
+@media (max-width: 767px) {
+  .cards .card p {
+    margin: 0 0 100px;
+  }
+}
+.cards .card img {
+  max-width: 100%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.team {
+  border-top: 5px solid #a1282d;
+  height: 330px;
+  order: 2;
+}
+.super {
+  border-top: 5px solid #44acab;
+  margin-top: 150px;
+}
+.karma {
+  border-top: 5px solid #cfa156;
+  margin-top: 150px;
+  order: 3;
+}
+.calc {
+  border-top: 5px solid #477fae;
+  margin-top: -150px;
+  order: 4;
+}
+@media (max-width: 991px) {
+  .team {
+    order: initial;
+  }
+  .super {
+    margin-top: 0;
+  }
+  .karma {
+    margin-top: 0;
+    order: initial;
+  }
+  .calc {
+    margin-top: 0;
+    order: initial;
+  }
+}
